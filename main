@@ -1,0 +1,16 @@
+
+# importing the requests library
+import requests
+
+# api-endpoint
+URL = "https://api.scryfall.com/cards/683c4e13-525c-45c9-8832-bfe67965c34e?format=json&pretty=true"
+
+# sending get request and saving the response as response object
+r = requests.get(url = URL)
+
+# extracting data in json format
+list = r.json()
+
+# extract the prices from json list
+data = list['prices']
+print(data)
